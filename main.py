@@ -76,6 +76,9 @@ def main():
 
     # User inputs
     user_query = st.text_input("Ingresa el tema o nombre de la clase que te interesa", max_chars=512)
+
+    # Slider for number of results to display
+    num_results = st.slider("Número de clases a mostrar", min_value=1, max_value=20, value=5)
    
     if st.button("Search"):
         # Generate embedding for the query string
@@ -88,7 +91,7 @@ def main():
        
 
         # Sort the DataFrame by similarity scores and take top 5
-        results = df.sort_values(by='similarity', ascending=False).head(5)
+        results = df.sort_values(by='similarity', ascending=False).head(num_results)
 
         # Display results
         st.dataframe(results)
