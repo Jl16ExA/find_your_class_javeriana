@@ -1,4 +1,4 @@
-#"Encuentra tu clase Javeriana" Streamlit Application
+# "Encuentra tu clase Javeriana" Streamlit Application
 
 ## Overview
 "Encuentra tu clase Javeriana" is an innovative Streamlit application designed to help users find classes related to their interests at Javeriana University. Utilizing state-of-the-art NLP techniques, this app processes user queries to match them with relevant class offerings.
