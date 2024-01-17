@@ -17,13 +17,13 @@ def convert_embedding(x):
         return []
 
 
-st.cache_resource
+@st.cache_resource
 def load_model_and_tokenizer():
     tokenizer = AutoTokenizer.from_pretrained('intfloat/multilingual-e5-small')
     model = AutoModel.from_pretrained('intfloat/multilingual-e5-small')
     return tokenizer, model
 
-st.cache_data
+@st.cache_data
 def load_data():
     # Load your DataFrame here
     df = pd.read_csv('path_to_new_csv_with_embeddings.csv')
